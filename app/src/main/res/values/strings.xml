@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PhotoChallenge</string>
+    <string name="dialog_question">Problem with Internet connection. Do you want to wait?</string>
+    <string name="wait">wait</string>
+    <string name="close_app">close app</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/photo_nvigation"
+    app:startDestination="@id/photoListFragment">
+
+    <fragment
+        android:id="@+id/photoListFragment"
+        android:name="com.te.photochallenge.view.PhotoListFragment"
+        android:label="PHOTO LIST"
+        tools:layout="@layout/fragment_photo_list">
+        <action
+            android:id="@+id/action_listToPhotoFragment"
+            app:destination="@id/detailPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPhotoFragment"
+        android:name="com.te.photochallenge.view.DetailPhotoFragment"
+        android:label="PHOTO"
+        tools:layout="@layout/fragment_detail_photo">
+        <action
+            android:id="@+id/action_detailPhotoToList"
+            app:destination="@id/photoListFragment" />
+        <argument
+            android:name="photoUrl"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
